@@ -7,13 +7,19 @@ then
           pattern2="^([A-Za-z]{3,})*$"
             if [[ $lastName =~ $pattern2 ]]
                then
-                     echo "ok"
+                     read -p "Enter your Email:" email
+                       pattern3="^[a-z0-9]+([._+][a-z0-9]+)*@[A-Za-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$"
+                         if [[ $email =~ $pattern3 ]]
+                             then
+                                  echo "ok"
+                         else
+                                  echo "enter valid input"
+                         fi
             else
                     echo "enter valid input"
              fi
 else
       echo  "enter valid input"
 fi
-
 
 
