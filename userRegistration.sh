@@ -11,6 +11,14 @@ then
                        pattern3="^[a-z0-9]+([._+][a-z0-9]+)*@[A-Za-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$"
                          if [[ $email =~ $pattern3 ]]
                              then
+                                   read -p "Enter your Mobile number:" mobileNum
+                                   pattern4="^([0-9]{2}[: :][0-9]{10})*$"
+                                         if [[ $mobileNum =~ $pattern4 ]]
+                                          then
+                                              echo "ok"
+                                          else
+                                              echo "not valid"
+                                           fi
                                   echo "ok"
                          else
                                   echo "enter valid input"
