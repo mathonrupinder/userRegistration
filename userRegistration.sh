@@ -15,7 +15,14 @@ then
                                    pattern4="^([0-9]{2}[: :][0-9]{10})*$"
                                          if [[ $mobileNum =~ $pattern4 ]]
                                           then
-                                              echo "ok"
+                                              read -p "Enter password:"password
+                                              pattern5="^([A-Za-z0-9]{8,})"
+                                                 if [[ $password =~ $pattern5 ]]
+                                                   then 
+                                                         echo "ok"
+                                                  else
+                                                         echo "not valid"
+
                                           else
                                               echo "not valid"
                                            fi
